@@ -25,20 +25,20 @@ The main goal is to address class imbalance in fraud detection problems by produ
 Automated dataset download from Kaggle via kagglehub.
 
 - Preprocessing: 
- - Standard scaling for PCA-transformed features (V1–V28).
- - Min-Max scaling for Amount.
- - Normalization for Time.
+     - Standard scaling for PCA-transformed features (V1–V28).
+     - Min-Max scaling for Amount.
+     - Normalization for Time.
 - GAN Architecture:
- - Generator: Dense layers with LeakyReLU, BatchNorm, and tanh output.
- - Discriminator: Dense layers with LeakyReLU, Dropout, and sigmoid output.
+     - Generator: Dense layers with LeakyReLU, BatchNorm, and tanh output.
+     - Discriminator: Dense layers with LeakyReLU, Dropout, and sigmoid output.
 - Training loop:
- - Separate training for real and fake batches.
- - Tracks discriminator and generator losses.
+     - Separate training for real and fake batches.
+     - Tracks discriminator and generator losses.
 - Synthetic Data Generation:
- - Generates fraud-only transactions (Class = 1).
- - Postprocessing ensures realistic ranges, rounding, and non-negative values.
+     - Generates fraud-only transactions (Class = 1).
+     - Postprocessing ensures realistic ranges, rounding, and non-negative values.
 - Evaluation Tools:
-  - Loss curves.
-  - Distribution comparisons (real vs synthetic).
+     - Loss curves.
+     - Distribution comparisons (real vs synthetic).
 - Correlation matrix analysis.
 - Export: Saves synthetic dataset to CSV.
