@@ -17,28 +17,56 @@ It can be used for **data augmentation**, **privacy-preserving research**, and *
 - Saves clean synthetic dataset as `synthetic_patients_clean.csv`.
 ---
 ## Credit Card Fraud GAN
-This project implements a Generative Adversarial Network (GAN) to generate synthetic credit card fraud transactions based on the highly imbalanced Kaggle Credit Card Fraud Dataset.
+### 📌 Overview
+This project compares a real-world credit card fraud dataset from Kaggle with a synthetic dataset generated to mimic its statistical properties.
+The goal is to assess how closely the synthetic dataset replicates the distribution, correlations, and fraud characteristics of the real data.
 
-The main goal is to address class imbalance in fraud detection problems by producing realistic synthetic fraud samples for training and experimentation.
+### 📂 Datasets
+1. **Real Dataset**
+- Source: Kaggle - Credit Card Fraud Detection
 
-### Features
-Automated dataset download from Kaggle via kagglehub.
+- Description: Contains 284,807 transactions made by European cardholders in September 2013.
 
-- Preprocessing: 
-     - Standard scaling for PCA-transformed features (V1–V28).
-     - Min-Max scaling for Amount.
-     - Normalization for Time.
-- GAN Architecture:
-     - Generator: Dense layers with LeakyReLU, BatchNorm, and tanh output.
-     - Discriminator: Dense layers with LeakyReLU, Dropout, and sigmoid output.
-- Training loop:
-     - Separate training for real and fake batches.
-     - Tracks discriminator and generator losses.
-- Synthetic Data Generation:
-     - Generates fraud-only transactions (Class = 1).
-     - Postprocessing ensures realistic ranges, rounding, and non-negative values.
-- Evaluation Tools:
-     - Loss curves.
-     - Distribution comparisons (real vs synthetic).
-- Correlation matrix analysis.
-- Export: Saves synthetic dataset to CSV.
+- Class distribution:
+    - Fraudulent transactions: ~0.17% of total.
+    - Highly imbalanced dataset.
+
+- Features:
+    - 30 columns: Time, V1–V28 (PCA components), Amount, and Class (target: 0 = non-fraud, 1 = fraud).
+
+2. **Synthetic Dataset**
+- File: improved_synthetic_creditcard.csv
+- Description: Artificially generated dataset meant to simulate the statistical characteristics of the real dataset while preserving privacy.
+- Purpose: To test whether fraud detection models trained on synthetic data can generalize to real-world cases.
+
+🛠 Methods Used for Comparison
+
+- Basic Statistical Summary
+    - Mean, median, standard deviation for numerical features.
+    - Fraud ratio comparison.
+- Distribution Analysis
+    - Histograms and KDE plots to compare feature distributions.
+    - Time and amount distribution comparisons.
+- Correlation Analysis
+    - Pearson correlation heatmaps for feature relationships.
+- Class Imbalance Evaluation
+    - Fraud-to-non-fraud ratios.
+- Visualization
+    - Side-by-side plots for real vs synthetic data.
+
+
+🎯 Objectives
+- Validate that the synthetic dataset mimics the real dataset's statistical patterns.
+- Ensure privacy preservation by avoiding leakage of sensitive real-world information.
+- Test fraud detection models on both datasets to check generalization.
+
+
+📊 Next Steps
+- Implement machine learning models (Logistic Regression, Random Forest, XGBoost, Neural Networks).
+- Train models on synthetic data and evaluate performance on real data.
+- Assess potential domain shift and performance drop.
+
+📜 License
+Real dataset: Licensed by the original Kaggle dataset provider.
+
+Synthetic dataset: Publicly shareable (no sensitive data).
