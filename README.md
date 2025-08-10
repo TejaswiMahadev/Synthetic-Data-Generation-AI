@@ -39,7 +39,7 @@ The goal is to assess how closely the synthetic dataset replicates the distribut
 - Description: Artificially generated dataset meant to simulate the statistical characteristics of the real dataset while preserving privacy.
 - Purpose: To test whether fraud detection models trained on synthetic data can generalize to real-world cases.
 
-🛠 Methods Used for Comparison
+### 🛠 Methods Used for Comparison
 
 - Basic Statistical Summary
     - Mean, median, standard deviation for numerical features.
@@ -55,18 +55,18 @@ The goal is to assess how closely the synthetic dataset replicates the distribut
     - Side-by-side plots for real vs synthetic data.
 
 
-🎯 Objectives
+### 🎯 Objectives
 - Validate that the synthetic dataset mimics the real dataset's statistical patterns.
 - Ensure privacy preservation by avoiding leakage of sensitive real-world information.
 - Test fraud detection models on both datasets to check generalization.
 
 
-📊 Next Steps
+### 📊 Next Steps
 - Implement machine learning models (Logistic Regression, Random Forest, XGBoost, Neural Networks).
 - Train models on synthetic data and evaluate performance on real data.
 - Assess potential domain shift and performance drop.
 
-📜 License
+### 📜 License
 Real dataset: Licensed by the original Kaggle dataset provider.
 
 Synthetic dataset: Publicly shareable (no sensitive data).
