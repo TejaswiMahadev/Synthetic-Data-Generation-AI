@@ -103,10 +103,4 @@ Key goals include:
 - This project aligns with the global push for **Responsible AI**, helping companies prove that their fraud detection models are trained on **non-identifiable, bias-checked datasets**.
 
 
-## Summary
-This project is **highly relevant** in the 2025 job market, particularly in:
-- **Fintech** (fraud detection, risk assessment)
-- **AI & ML** (synthetic data generation & validation)
-- **Data Privacy Compliance**  
-Employers in **banking, insurance, and e-commerce** would value this skillset.
 
